@@ -6,8 +6,6 @@
 //
 import Foundation
 class Mage: Caracter {
-
-    
     var weapon: Weapon?
     var name: String
     var live: Int

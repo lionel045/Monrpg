@@ -9,7 +9,6 @@ import Foundation
 
 class Elfe: Caracter {
     var weapon: Weapon?
-    // Elfe's Caracters, This caracters start the game with more live than other caracters
     var name: String
     var live: Int
     var dammage =  Dammage()

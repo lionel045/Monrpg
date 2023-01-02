@@ -7,10 +7,6 @@
 import Foundation
 class Assassin: Caracter {
     var weapon: Weapon?
-    func getlive() -> Int {
-        return live
-    }
-    // He's stronger when is wear an wheapon
     var name: String
     var live: Int
     var dammage = Dammage()
