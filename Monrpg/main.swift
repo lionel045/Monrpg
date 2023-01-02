@@ -1,11 +1,7 @@
-//
-//  main.swift
-//  Monrpg
-//
-//  Created by Lion on 02/01/2023.
-//
-
 import Foundation
+var joueur1 = Player()
+var joueur2 = Player()
 
-print("Hello, World!")
+var game = GameSystem()
 
+game.launchGame(player1: joueur1, player2: joueur2)
