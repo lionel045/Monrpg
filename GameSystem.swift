@@ -37,6 +37,7 @@ class GameSystem {
             }
         }
     }
+    // setting up a magic chest system
     func findMagicalChest(currentCaracters: inout Caracters) {
         let dagger = Dagger()
         let sword = Sword()
@@ -47,7 +48,6 @@ class GameSystem {
         let nameOfweapon = currentCaracters.weapon?.name ?? ""
         print(currentCaracters.name + " " + "Tombe sur un coffre et trouve \(nameOfweapon)")
     }
-
     func makeAnAction(currentPlayer: Player, ennemy: Player) {
         var choiceofUser = String()
         while choiceofUser != "A" || choiceofUser != "B"{
@@ -66,6 +66,7 @@ class GameSystem {
             }
         }
     }
+     // Check who win
     func checkWhoWin(player1: Player, player2: Player) {
         if player1.teamOfCaracters.count == 0 {
             print("Le joueur 2 a gg en \(countTour) tour ")
