@@ -10,17 +10,17 @@ class GameSystem {
     var countTour = 0
     var allCaratersIsAlive = true // init an variable who chek if all caracter's player are live
     func checkCaractersPlayerlive(currentplayer: Player) {
-        if currentplayer.teamOfCaracters.contains(where: {$0.live <= 0 }) {
+        if currentplayer.teamOfCharacters.contains(where: {$0.live <= 0 }) {
             print("Votre personnage est désormais Ko \(currentplayer.nameUser)")
-            currentplayer.teamOfCaracters.removeAll(where: {$0.live <= 0 })
+            currentplayer.teamOfCharacters.removeAll(where: {$0.live <= 0 })
         }
     }
-    func selectedOponentCaracters(openent: Player ) -> Caracter {
-        let openentSelected = openent.teamOfCaracters // Retrieve all caracters in team
+    func selectedOponentCharacters(openent: Player ) -> Character {
+        let openentSelected = openent.teamOfCharacters // Retrieve all caracters in team
         var indexFinded = false // create an boolean variable for check if the index in array was found
         print("Selectionner le personnage que vous souhaiter attaquer parmis les personnage de \(openent.nameUser):" )
         while !indexFinded {
-            openent.teamOfCaracters.forEach {
+            openent.teamOfCharacters.forEach {
                 print($0.name, terminator: " " )
             }
             print()
@@ -38,15 +38,15 @@ class GameSystem {
         }
     }
     // setting up a magic chest system
-    func findMagicalChest(currentCaracters: inout Caracter) {
+    func findMagicalChest(currentCharacters: inout Character) {
         let dagger = Dagger()
         let sword = Sword()
         let scepter = Scepter()
         let allAvailableWeapon: [Weapon] = [dagger, sword, scepter]
         let chest = allAvailableWeapon.randomElement()
-        currentCaracters.weapon = chest
-        let nameOfweapon = currentCaracters.weapon?.name ?? ""
-        print(currentCaracters.name + " " + "Tombe sur un coffre et trouve \(nameOfweapon)")
+        currentCharacters.weapon = chest
+        let nameOfweapon = currentCharacters.weapon?.name ?? ""
+        print(currentCharacters.name + " " + "Tombe sur un coffre et trouve \(nameOfweapon)")
     }
     func makeAnAction(currentPlayer: Player, ennemy: Player) {
         var choiceofUser = String()
@@ -55,23 +55,23 @@ class GameSystem {
             print("A: Attaquer  \n  B: Soigné ")
             choiceofUser = Player.getChoiceOfUser()
             if choiceofUser == "A" || choiceofUser == "a" {
-                var caractersWhoattack = currentPlayer.selectedMyCaracter()
-                findMagicalChest(currentCaracters: &caractersWhoattack)
-                var ennemy = self.selectedOponentCaracters(openent: ennemy)
-                caractersWhoattack.attack(ennemy: &ennemy)
+                var characterWhoattack = currentPlayer.selectedMyCharacter()
+                findMagicalChest(currentCharacters: &characterWhoattack)
+                var ennemy = self.selectedOponentCharacters(openent: ennemy)
+                characterWhoattack.attack(ennemy: &ennemy)
                 break
             } else if choiceofUser == "b" || choiceofUser == "B" {
-                currentPlayer.healCaracter()
+                currentPlayer.healCharacter()
                 break
             }
         }
     }
     // Check who win
     func checkWhoWin(player1: Player, player2: Player) {
-        if player1.teamOfCaracters.count == 0 {
+        if player1.teamOfCharacters.count == 0 {
             print("Le joueur 2 a gg en \(countTour) tour ")
             allCaratersIsAlive = false
-        } else if player2.teamOfCaracters.count == 0 {
+        } else if player2.teamOfCharacters.count == 0 {
             print("Le joueur 1 a gg  en \(countTour) tour")
             allCaratersIsAlive = false
         }

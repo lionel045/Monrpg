@@ -7,7 +7,7 @@
 
 import Foundation
 
-class Elfe: Caracter {
+class Elfe: Character {
     var weapon: Weapon?
     var name: String
     var live: Int

@@ -7,16 +7,16 @@
 
 import Foundation
 
-protocol Caracter {  // Define a protocol for the caracters for protect the mistake and create an model
+protocol Character {  // Define a protocol for the caracters for protect the mistake and create an model
     var name: String { get }
     var weapon: Weapon? { get set }
     var live: Int { get set }
     var chanceForMakeCriticalDamage: Int {get}
-    func attack(ennemy: inout Caracter)
+    func attack(ennemy: inout Character)
     init() // Possibility for users to choose in initialision the wheapons
 }
-extension Caracter {
-    func attack(ennemy: inout Caracter) {
+extension Character {
+    func attack(ennemy: inout Character) {
         let numberOfDammage = (self.weapon?.dammage.numberofDammage) ?? 0
         let random = Int.random(in: 1...10)
         if random <= self.chanceForMakeCriticalDamage {
