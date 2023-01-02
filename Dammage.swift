@@ -6,6 +6,7 @@
 //
 
 import Foundation
+
 struct Dammage {
     var numberofDammage: Int {
         willSet {

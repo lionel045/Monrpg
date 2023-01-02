@@ -5,6 +5,7 @@
 //  Created by Lion on 12/12/2022.
 //
 import Foundation
+
 class Assassin: Character {
     var weapon: Weapon?
     var name: String

@@ -5,6 +5,7 @@
 //  Created by Lion on 07/12/2022.
 //
 import Foundation
+
 class Mage: Character {
     var weapon: Weapon?
     var name: String

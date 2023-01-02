@@ -1,4 +1,5 @@
 import Foundation
+
 var joueur1 = Player()
 var joueur2 = Player()
 
