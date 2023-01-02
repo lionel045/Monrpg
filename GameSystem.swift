@@ -15,7 +15,7 @@ class GameSystem {
             currentplayer.teamOfCaracters.removeAll(where: {$0.live <= 0 })
         }
     }
-    func selectedOponentCaracters(openent: Player ) -> Caracters {
+    func selectedOponentCaracters(openent: Player ) -> Caracter {
         let openentSelected = openent.teamOfCaracters // Retrieve all caracters in team
         var indexFinded = false // create an boolean variable for check if the index in array was found
         print("Selectionner le personnage que vous souhaiter attaquer parmis les personnage de \(openent.nameUser):" )
@@ -38,7 +38,7 @@ class GameSystem {
         }
     }
     // setting up a magic chest system
-    func findMagicalChest(currentCaracters: inout Caracters) {
+    func findMagicalChest(currentCaracters: inout Caracter) {
         let dagger = Dagger()
         let sword = Sword()
         let scepter = Scepter()
@@ -66,7 +66,7 @@ class GameSystem {
             }
         }
     }
-     // Check who win
+    // Check who win
     func checkWhoWin(player1: Player, player2: Player) {
         if player1.teamOfCaracters.count == 0 {
             print("Le joueur 2 a gg en \(countTour) tour ")

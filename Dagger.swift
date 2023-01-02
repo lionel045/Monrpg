@@ -9,7 +9,7 @@ import Foundation
 
 class Dagger: Weapon {
     var dammage = Dammage()
-    var name = "Dagger"
+    var name = "Dague Magique"
     required init() {
         self.dammage.numberofDammage = 40
     }

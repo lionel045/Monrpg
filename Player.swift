@@ -9,7 +9,7 @@ import Foundation
 
 class Player {
     var nameUser = String()
-    var teamOfCaracters: [Caracters] = []
+    var teamOfCaracters: [Caracter] = []
     var playerHasplay = false
     func getUsername() -> String? {
         print("Entrez votre nom de joueur")
@@ -20,19 +20,19 @@ class Player {
         let makeChoice = readLine() ?? ""
         return makeChoice
     }
-    func browseAllCaracters() -> [Caracters] { // This function aims to browse all caracters avalaible
+    func browseAllCaracters() -> [Caracter] { // This function aims to browse all caracters avalaible
         let elfe = Elfe() // Init elfe's Caracters
         let mage = Mage()// Init mage's Caracterd
-        let killer = Killer()
-        let allAvailableCaracters: [Caracters] = [elfe, mage, killer] // Init a constant of all caracters
+        let killer = Assassin()
+        let allAvailableCaracters: [Caracter] = [elfe, mage, killer] // Init a constant of all caracters
         allAvailableCaracters.forEach {
             print($0.name, terminator: " " ) // Iterate all value and print name
         }
         return allAvailableCaracters
     }
 
-    func choiceOfCaracters() -> [Caracters] { // forces the user to choose two caracters among the avalaible Caracter
-        var caractersPlayerArray: [Caracters] = [] // Initialize an empty array of Carecters's type
+    func choiceOfCaracters() -> [Caracter] { // forces the user to choose two caracters among the avalaible Caracter
+        var caractersPlayerArray: [Caracter] = [] // Initialize an empty array of Carecters's type
         let countCaracters = 2 // Count users init
         let availableCaracters = browseAllCaracters() // Print a view for all caracters available
         repeat {
@@ -51,7 +51,7 @@ class Player {
         } while(caractersPlayerArray.count != countCaracters)
         return caractersPlayerArray
     }
-    func selectedMyCaracter() -> Caracters // A method to choose a caracter among all caraters in team
+    func selectedMyCaracter() -> Caracter // A method to choose a caracter among all caraters in team
     {
         var indexfinded = false
         while !indexfinded {
