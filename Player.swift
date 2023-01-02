@@ -10,7 +10,7 @@ import Foundation
 class Player {
     var nameUser = String()
     var teamOfCharacters: [Character] = []
-    var playerHasplay = false
+    
     func getUsername() -> String? {
         print("Entrez votre nom de joueur")
         let inputUser = readLine()
