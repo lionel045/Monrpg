@@ -73,7 +73,7 @@ class GameSystem {
             print("Le joueur 1 a gg  en \(countTour) tour")
         }
     }
-    func launchGame(player1: Player, player2: Player) { // Start the game with the two player
+       func launchGame(player1: Player, player2: Player) { // Start the game with the two player
         var currentPlayer = player1
         var otherPlayer = player2
         while  player1.teamOfCharacters.count > 0 && player2.teamOfCharacters.count > 0 { // check team of each player
