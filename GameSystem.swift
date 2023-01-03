@@ -5,15 +5,14 @@
 //  Created by Lion on 12/12/2022.
 //
 import Foundation
-
 class GameSystem {
     var countTour = 0
     var allCharatersIsAlive = true // init an variable who chek if all character's player are live
-    func checkCharactersPlayerlive(currentplayer: Player) {
+    func checkPlayerCharactersLive(currentplayer: Player) {
         if currentplayer.teamOfCharacters.contains(where: {$0.live <= 0 }) {
-            print("Votre personnage est désormais Ko \(currentplayer.nameUser)")
-            currentplayer.teamOfCharacters.removeAll(where: {$0.live <= 0 })
-        }
+                print("Votre personnage est désormais Ko \(currentplayer.nameUser)")
+                currentplayer.teamOfCharacters.removeAll(where: {$0.live <= 0 })
+            }
     }
     func selectedOponentCharacters(openent: Player ) -> Character {
         let openentSelected = openent.teamOfCharacters // Retrieve all characters in team
@@ -50,15 +49,15 @@ class GameSystem {
     }
     func makeAnAction(currentPlayer: Player, ennemy: Player) {
         var choiceofUser = String()
-        while choiceofUser != "A" || choiceofUser != "B"{
+        while choiceofUser != "A" && choiceofUser != "B"{
             print("Quel action souhaitiez vous Effectuer \(currentPlayer.nameUser)")
             print("A: Attaquer  \n  B: Soigné ")
             choiceofUser = Player.getChoiceOfUser()
             if choiceofUser == "A" || choiceofUser == "a" {
                 var charactersWhoattack = currentPlayer.selectedMyCharacter()
                 findMagicalChest(currentCharacters: &charactersWhoattack)
-                var ennemy = self.selectedOponentCharacters(openent: ennemy)
-                charactersWhoattack.attack(ennemy: &ennemy)
+                var target = self.selectedOponentCharacters(openent: ennemy)
+                charactersWhoattack.attack(ennemy: &target)
                 break
             } else if choiceofUser == "b" || choiceofUser == "B" {
                 currentPlayer.healCharacter()
@@ -70,23 +69,20 @@ class GameSystem {
     func checkWhoWin(player1: Player, player2: Player) {
         if player1.teamOfCharacters.count == 0 {
             print("Le joueur 2 a gg en \(countTour) tour ")
-            allCharatersIsAlive = false
         } else if player2.teamOfCharacters.count == 0 {
             print("Le joueur 1 a gg  en \(countTour) tour")
-            allCharatersIsAlive = false
         }
     }
     func launchGame(player1: Player, player2: Player) { // Start the game with the two player
         var currentPlayer = player1
         var otherPlayer = player2
-        while  allCharatersIsAlive { // While the boolean is true we  loop
+        while  player1.teamOfCharacters.count > 0 && player2.teamOfCharacters.count > 0 { // check team of each player
             self.makeAnAction(currentPlayer: currentPlayer, ennemy: otherPlayer)
-            self.checkCharactersPlayerlive(currentplayer: player1) // Check if the Character's player was live
-            self.checkCharactersPlayerlive(currentplayer: player2)
+            self.checkPlayerCharactersLive(currentplayer: player1) // Check if the Character's player was live
+            self.checkPlayerCharactersLive(currentplayer: player2)
             self.checkWhoWin(player1: player1, player2: player2)
             (currentPlayer, otherPlayer) = (otherPlayer, currentPlayer)
             countTour += 1
         }
     }
 }
-

@@ -30,10 +30,9 @@ class Player {
         }
         return allAvailableCharacters
     }
-    
     func choiceOfCharacters() -> [Character] { // forces the user to choose two characters among the avalaible Character
         var charactersPlayerArray: [Character] = [] // Initialize an empty array of Carecters's type
-        let countCharacters = 2 // Count users init
+        let countCharacters = 3 // Count users init
         let availableCharacters = browseAllCharacters() // Print a view for all character available
         repeat {
             print("\n" + "Veuillez sélectionner \(countCharacters - charactersPlayerArray.count) personnage parmis la liste ")
