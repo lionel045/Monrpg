@@ -10,7 +10,6 @@ class Assassin: Character {
     var weapon: Weapon?
     var name: String
     var live: Int
-    var dammage = Dammage()
     var chanceForMakeCriticalDamage = 2
     required init() {
         self.name = "Ezio"

@@ -8,9 +8,7 @@
 import Foundation
 
 class Scepter: Weapon {
-    var dammage = Dammage()
-    var name = "Sceptre de la destiné"
-    required init() {
-        self.dammage.numberofDammage = 50
+    init() {
+        super.init(weaponName: "Sceptre de la destiné", damage: 50)
     }
 }

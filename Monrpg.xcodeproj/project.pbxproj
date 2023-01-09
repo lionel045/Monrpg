@@ -16,9 +16,8 @@
 		B4B7C3BE29626E650035D12A /* GameSystem.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4B7C3B129626E650035D12A /* GameSystem.swift */; };
 		B4B7C3BF29626E650035D12A /* Dagger.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4B7C3B229626E650035D12A /* Dagger.swift */; };
 		B4B7C3C029626E650035D12A /* Sword.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4B7C3B329626E650035D12A /* Sword.swift */; };
-		B4B7C3C129626E650035D12A /* Dammage.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4B7C3B429626E650035D12A /* Dammage.swift */; };
+		B4B7C3C129626E650035D12A /* Weapon.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4B7C3B429626E650035D12A /* Weapon.swift */; };
 		B4B7C3C229626E650035D12A /* Elfe.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4B7C3B529626E650035D12A /* Elfe.swift */; };
-		B4B7C3C329626E650035D12A /* Weapon.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4B7C3B629626E650035D12A /* Weapon.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -44,9 +43,8 @@
 		B4B7C3B129626E650035D12A /* GameSystem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GameSystem.swift; sourceTree = "<group>"; };
 		B4B7C3B229626E650035D12A /* Dagger.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Dagger.swift; sourceTree = "<group>"; };
 		B4B7C3B329626E650035D12A /* Sword.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Sword.swift; sourceTree = "<group>"; };
-		B4B7C3B429626E650035D12A /* Dammage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Dammage.swift; sourceTree = "<group>"; };
+		B4B7C3B429626E650035D12A /* Weapon.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Weapon.swift; sourceTree = "<group>"; };
 		B4B7C3B529626E650035D12A /* Elfe.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Elfe.swift; sourceTree = "<group>"; };
-		B4B7C3B629626E650035D12A /* Weapon.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Weapon.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -77,8 +75,7 @@
 				B4B7C3B229626E650035D12A /* Dagger.swift */,
 				B4B7C3AB29626E650035D12A /* Scepter.swift */,
 				B4B7C3B329626E650035D12A /* Sword.swift */,
-				B4B7C3B429626E650035D12A /* Dammage.swift */,
-				B4B7C3B629626E650035D12A /* Weapon.swift */,
+				B4B7C3B429626E650035D12A /* Weapon.swift */,
 			);
 			name = Weapons;
 			sourceTree = "<group>";
@@ -169,10 +166,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B4B7C3C329626E650035D12A /* Weapon.swift in Sources */,
 				B4B7C3BD29626E650035D12A /* main.swift in Sources */,
 				B4B7C3BC29626E650035D12A /* Character.swift in Sources */,
-				B4B7C3C129626E650035D12A /* Dammage.swift in Sources */,
+				B4B7C3C129626E650035D12A /* Weapon.swift in Sources */,
 				B4B7C3BE29626E650035D12A /* GameSystem.swift in Sources */,
 				B4B7C3BF29626E650035D12A /* Dagger.swift in Sources */,
 				B4B7C3BB29626E650035D12A /* Assassin.swift in Sources */,

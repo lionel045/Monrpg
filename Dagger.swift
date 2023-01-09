@@ -8,9 +8,7 @@
 import Foundation
 
 class Dagger: Weapon {
-    var dammage = Dammage()
-    var name = "Dague Magique"
-    required init() {
-        self.dammage.numberofDammage = 40
+    init() {
+        super.init(weaponName: "Dague Magique", damage: 25)
     }
 }
