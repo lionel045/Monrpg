@@ -44,7 +44,7 @@ class GameSystem {
         let allAvailableWeapon: [Weapon] = [dagger, sword, scepter]
         let chest = allAvailableWeapon.randomElement()
         currentCharacters.weapon = chest
-        let nameOfweapon = currentCharacters.weapon?.name ?? ""
+        let nameOfweapon = currentCharacters.weapon?.weaponName ?? ""
         print(currentCharacters.name + " " + "Tombe sur un coffre et trouve \(nameOfweapon)")
     }
     func makeAnAction(currentPlayer: Player, ennemy: Player) {

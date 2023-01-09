@@ -17,7 +17,7 @@ protocol Character {  // Define a protocol for the caracters for protect the mis
 }
 extension Character {
     func attack(ennemy: inout Character) {
-        let numberOfDammage = (self.weapon?.dammage.numberofDammage) ?? 0
+        let numberOfDammage = (self.weapon?.damage) ?? 0
         let random = Int.random(in: 1...10)
         if random <= self.chanceForMakeCriticalDamage {
              let criticalStrike = numberOfDammage * 2

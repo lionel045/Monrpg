@@ -8,9 +8,7 @@
 import Foundation
 
 class Sword: Weapon {
-    var dammage = Dammage()
-    var name = "Epee de la vérité"
-    required init() {
-        self.dammage.numberofDammage = 48
+    init() {
+        super.init(weaponName: "Epee de la vérité", damage: 48)
     }
 }
